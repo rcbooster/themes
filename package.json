@@ -1,0 +1,69 @@
+{
+	"name": "themes",
+	"description": "Custom Rocket.Chat Themes",
+	"version": "0.0.1",
+	"author": {
+		"name": "RocketBooster",
+		"url": "https://www.rocketbooster.net"
+	},
+	"contributors": [{
+			"email": "will@reiske.tech",
+			"name": "Will Reiske",
+			"url": "https://reiske.tech"
+		},
+		{
+			"email": "alan@rtistics.com",
+			"name": "Alan Quandt",
+			"url": "https://alanquandt.com/"
+		}
+	],
+	"homepage": "https://themes.rocketbooster.net",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/rcbooster/themes"
+	},
+	"bugs": {
+		"url": "https://github.com/rcbooster/themes/issues"
+	},
+	"private": false,
+	"scripts": {
+		"debug": "meteor run --inspect-brk=9229",
+		"start": "meteor run",
+		"lint": "./node_modules/.bin/eslint .",
+		"test": "meteor test --once --driver-package meteortesting:mocha",
+		"test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+		"visualize": "meteor --production --extra-packages bundle-visualizer"
+	},
+	"dependencies": {
+		"@babel/runtime": "^7.0.0",
+		"bootstrap": "^4.3.1",
+		"https": "^1.0.0",
+		"jquery": "^3.4.1",
+		"lodash": "^4.17.11",
+		"meteor-node-stubs": "^0.4.1",
+		"moment": "^2.24.0",
+		"node-rsa": "^1.0.5",
+		"popper.js": "^1.15.0",
+		"toastr": "^2.1.4"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.5.1",
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.16.0",
+		"mocha": "^6.1.4",
+		"husky": "^2.2.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "meteor npm run lint",
+			"pre-push": "meteor npm run lint"
+		}
+	},
+	"meteor": {
+		"mainModule": {
+			"client": "client/main.js",
+			"server": "server/main.js"
+		},
+		"testModule": "tests/main.js"
+	}
+}

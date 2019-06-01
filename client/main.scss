@@ -1,0 +1,35 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/toastr/toastr.scss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+	height: 100%;
+}
+
+
+.toast-position {
+	top: 0px;
+	right: 0px;
+	padding-right: 10px;
+}
+
+#toast-container {
+	padding-top: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+	#toast-container {
+		padding: 10px;
+		width: 100%;
+
+		.toastr {
+			width: 100%;
+		}
+	}
+
+	.toast-position {
+		padding: unset;
+	}
+}
