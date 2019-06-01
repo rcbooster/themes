@@ -6,7 +6,8 @@
 		"name": "RocketBooster",
 		"url": "https://www.rocketbooster.net"
 	},
-	"contributors": [{
+	"contributors": [
+		{
 			"email": "will@reiske.tech",
 			"name": "Will Reiske",
 			"url": "https://reiske.tech"
